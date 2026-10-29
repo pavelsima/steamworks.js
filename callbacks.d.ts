@@ -48,6 +48,10 @@ export interface CallbackReturns {
         lobby_steam_id: bigint
         friend_steam_id: bigint
     }
+    [client.callback.SteamCallback.GameRichPresenceJoinRequested]: {
+        friend_steam_id: bigint
+        connect: string
+    }
     [client.callback.SteamCallback.MicroTxnAuthorizationResponse]: {
         app_id: number
         order_id: number | bigint
